@@ -1,24 +1,26 @@
 import axios from 'axios'
 
+const env = import.meta.env
+
 export const API_ENDPOINTS = {
     auth: {
-        register: '/api/auth/register',
-        login: '/api/auth/login',
-        logout: '/api/auth/logout',
-        me: '/api/auth/me',
-        refresh: '/api/auth/refresh',
+        register: env.VITE_API_AUTH_REGISTER || '/api/auth/register',
+        login: env.VITE_API_AUTH_LOGIN || '/api/auth/login',
+        logout: env.VITE_API_AUTH_LOGOUT || '/api/auth/logout',
+        me: env.VITE_API_AUTH_ME || '/api/auth/me',
+        refresh: env.VITE_API_AUTH_REFRESH || '/api/auth/refresh',
     },
     products: {
-        list: '/api/products/get',
-        byId: (id) => `/api/products/get/${id}`,
-        create: '/api/products/create',
-        update: (id) => `/api/products/update/${id}`,
-        remove: (id) => `/api/products/delete/${id}`,
+        list: env.VITE_API_PRODUCTS_LIST || '/api/products/get',
+        byId: (id) => `${env.VITE_API_PRODUCTS_BY_ID || '/api/products/get'}/${id}`,
+        create: env.VITE_API_PRODUCTS_CREATE || '/api/products/create',
+        update: (id) => `${env.VITE_API_PRODUCTS_UPDATE || '/api/products/update'}/${id}`,
+        remove: (id) => `${env.VITE_API_PRODUCTS_DELETE || '/api/products/delete'}/${id}`,
     },
 }
 
 export const apiClient = axios.create({
-    baseURL: import.meta.env.DEV ? '' : (import.meta.env.VITE_API_URL || ''),
+    baseURL: env.DEV ? '' : (env.VITE_API_URL || ''),
     timeout: 12000,
     withCredentials: true,
 })
