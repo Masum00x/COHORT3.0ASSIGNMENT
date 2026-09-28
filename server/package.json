@@ -1,0 +1,35 @@
+{
+  "name": "taske-commerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run dev",
+    "dev": "nodemon server.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Masum00x/cohort3.0Task.git"
+  },
+  "author": "Masum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Masum00x/cohort3.0Task/issues"
+  },
+  "homepage": "https://github.com/Masum00x/cohort3.0Task#readme",
+  "dependencies": {
+    "@imagekit/nodejs": "^7.12.1",
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^18.0.3",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.10.2",
+    "multer": "^2.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

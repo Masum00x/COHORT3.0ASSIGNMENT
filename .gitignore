@@ -1,0 +1,34 @@
+# =================( DEPENDENCIES )=================
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# =================( ENVIRONMENT VARIABLES )=================
+# This catches .env files anywhere in the project (root, client, or server)
+.env
+.env.local
+.env.development
+.env.production
+**/.env
+**/.env.*
+
+# =================( BUILDS & OUTPUTS )=================
+client/dist/
+client/build/
+server/dist/
+build/
+.output/
+
+# =================( LOGS & DEBUGGING )=================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# =================( OS & EDITOR FILES )=================
+.DS_Store          # macOS folder metadata
+Thumbs.db          # Windows thumbnail cache
+.vscode/           # Visual Studio Code workspace settings (optional)
+.idea/             # WebStorm/IntelliJ workspace settings (optional)
